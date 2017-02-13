@@ -1,5 +1,5 @@
 {
-  "name": "torch3d",
+  "name": "torch_ui",
   "version": "0.0.1",
   "description": "Torch Song 3D simulator",
   "main": "torch3d.js",
@@ -7,6 +7,8 @@
   "scripts": {},
   "devDependencies": {
     "browserify": "^13.1.1",
+    "coffeeify": "^2.1.0",
+    "gulp-coffeeify": "^0.1.8",
     "gulp-livereload": "^3.8.1",
     "gulp-markdown": "^1.2.0",
     "gulp-rename": "^1.2.2",

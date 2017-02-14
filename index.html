@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="css/navbar.css" rel="stylesheet">
 
+    <link href="css/torch_ui.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
@@ -71,7 +72,18 @@
         </div><!--/.container-fluid -->
       </nav>
       <div id='content' ng-app='TorchSongApp' ng-controller="MainController">
-        {{testValue}}
+        <div ng-repeat="edge in torchModel">
+          <div class="well edge-container">
+            {{edge.name}}:
+            <button type="button" ng-class="{btn: true, 'btn-danger': edge.valve, 'btn-secondary': !edge.valve}">Valve</button>
+            <button type="button" ng-class="{btn: true, 'btn-warning': edge.igniter, 'btn-secondary': !edge.igniter}">Iginiter</button>
+            <div class="btn-group" role="group">
+              <button type="button" ng-class="{btn: true, 'btn-success': edge.drive == -1, 'btn-secondary': edge.drive == 0}">Rev</button>
+              <button type="button" ng-class="{btn: true, 'btn-success': edge.drive == 1, 'btn-secondary': edge.drive == 0}">Fwd</button>
+            </div>
+          </div>
+        </div>
+
       </div>
       <!-- <div class="jumbotron">
 

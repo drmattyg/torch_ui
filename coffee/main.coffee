@@ -11,14 +11,3 @@ app.controller "MainController", ($scope) ->
     drive: -1,
     igniter: 0}
   ]
-  $scope.driveLabel = (d) ->
-    return 'Fwd' if d == 1
-    return 'Rev' if d == -1
-    return 'Drive'
-
-  $scope.driveClass = (d) ->
-    return {
-      btn: true
-      'btn-success': d != 0
-      'btn-secondary': d == 0
-      }

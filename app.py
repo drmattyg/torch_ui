@@ -1,9 +1,7 @@
 from flask import Flask, url_for
 from flask_socketio import SocketIO
-import os
 
 app = Flask(__name__)
-app.static_folder = os.path.join(os.path.curdir, 'static')
 
 
 @app.route('/')
